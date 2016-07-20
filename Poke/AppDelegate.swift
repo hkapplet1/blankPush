@@ -42,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if notificationSettings.types != .None {
 //            print("not NONE")
+            
             application.registerForRemoteNotifications()
 //            print("registered")
         }else{
