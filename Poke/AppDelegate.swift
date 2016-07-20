@@ -41,23 +41,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("notificationSettings.types:\(notificationSettings.types)")
         
         if notificationSettings.types != .None {
-            print("not NONE")
+//            print("not NONE")
             application.registerForRemoteNotifications()
-            print("registered")
+//            print("registered")
         }else{
             print("NONE")
         }
     }
     func registerForPushNotifications(application: UIApplication) {
-        print("calling registerForPushNotifications")
+//        print("calling registerForPushNotifications")
         let notificationSettings = UIUserNotificationSettings(
             forTypes: [.Badge, .Sound, .Alert], categories: nil)
         application.registerUserNotificationSettings(notificationSettings)
-        print("finish calling registerForPushNotifications")
+//        print("finish calling registerForPushNotifications")
     }
     
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-        print("did reg")
+//        print("did reg")
         
         let tokenChars = UnsafePointer<CChar>(deviceToken.bytes)
         var tokenString = ""
@@ -66,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tokenString += String(format: "%02.2hhx", arguments: [tokenChars[i]])
         }
         
-        print("Device Token:", tokenString)
+//        print("Device Token:", tokenString)
     }
     
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
