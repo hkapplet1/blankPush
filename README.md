@@ -35,3 +35,9 @@ at AppDelegate.swift file,
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
         print("Failed to register:", error)
     }
+
+
+
+Download the Easy APNs provider as the testing tool at:-
+https://itunes.apple.com/hk/app/easy-apns-provider-push-notification/id989622350?mt=12
+
